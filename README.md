@@ -1,0 +1,1 @@
+# PARDALIS-Platform-for-Assisted-Recognition-of-Documents-AI-based-Labeling-Image-Sorting
