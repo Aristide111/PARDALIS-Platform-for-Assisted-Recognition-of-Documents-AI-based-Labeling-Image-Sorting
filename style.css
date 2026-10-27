@@ -1,0 +1,155 @@
+/* ==========================================================================
+   Design Immersif Pompéien & Dionysiaque
+   — Banderoles latérales, Fond beige, Titres dorés & Encarts Vin de Dionysos
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap');
+
+:root {
+  --pompeian-red: #7c2d20;
+  --pompeian-dark: #3a1914;
+  --dionysian-purple: #2b1020; /* Violet profond / Prune / Vin de Dionysos */
+  --dionysian-purple-light: #421d33; /* Teinte secondaire pour survols et dégradés */
+  --gold-accent: #d4af37;
+  --gold-light: #f3e5ab;
+  --bg-beige: #faf6f2;
+  --card-bg: #ffffff;
+  --text-dark: #1a1210;
+  --border-soft: #e5d9d3;
+}
+
+/* --- Arrière-plan global et structure --- */
+body, .gradio-container {
+  background-color: var(--pompeian-red) !important;
+  color: var(--text-dark) !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 1.15rem !important; /* Texte agrandi au max */
+}
+
+/* Conteneur principal simulé en grille 3 colonnes : Banderole | App | Banderole */
+.gradio-container > .main {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* --- En-tête : Titre sur fond rouge avec texte en or --- */
+#header-container {
+  background: linear-gradient(180deg, var(--dionysian-purple) 0%, var(--pompeian-red) 100%) !important;
+  padding: 2.5rem 2rem !important;
+  text-align: center !important;
+  border-bottom: 3px solid var(--gold-accent) !important;
+  margin-bottom: 2rem !important;
+}
+
+#header-container h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  color: var(--gold-accent) !important;
+  font-size: 3rem !important; /* Titre très grand */
+  font-weight: 700 !important;
+  margin-bottom: 0.5rem !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+#header-container p {
+  color: var(--gold-light) !important;
+  font-size: 1.3rem !important;
+}
+
+/* --- Corps de l'application en beige --- */
+.gradio-container .tab-item, .gradio-container .gr-group, .gradio-container .gr-box, .gradio-container .gr-panel {
+  background-color: var(--bg-beige) !important;
+  color: var(--text-dark) !important;
+  border: 1px solid var(--border-soft) !important;
+  border-radius: 12px !important;
+}
+
+/* Textes et libellés dans le corps en noir/sombre */
+label, span, p, .gr-form-label, .prose {
+  color: var(--text-dark) !important;
+  font-size: 1.15rem !important;
+}
+
+/* Titres secondaires à l'intérieur de l'app */
+h2, h3, .prose h2, .prose h3 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  color: var(--pompeian-dark) !important;
+  font-size: 1.8rem !important;
+  border-bottom: 2px solid var(--gold-accent) !important;
+  padding-bottom: 8px !important;
+}
+
+/* --- Encarts Dionysiaques (Nouveau : Violet somptueux & vinous) --- */
+/* Utilisez la classe 'dionysian-box' sur un Group, Box ou HTML pour ces encarts */
+.dionysian-box, .gr-box.dionysian-box, .gr-group.dionysian-box {
+  background: linear-gradient(145deg, var(--dionysian-purple), #1f0b17) !important;
+  color: var(--gold-light) !important;
+  border: 1px solid var(--gold-accent) !important;
+  border-radius: 12px !important;
+  padding: 1.5rem !important;
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.4), 0 4px 10px rgba(43, 16, 32, 0.3) !important;
+}
+
+/* Textes et titres spécifiques à l'intérieur des encarts dionysiaques */
+.dionysian-box label, 
+.dionysian-box span, 
+.dionysian-box p, 
+.dionysian-box .prose {
+  color: var(--gold-light) !important;
+}
+
+.dionysian-box h2, 
+.dionysian-box h3, 
+.dionysian-box .prose h2, 
+.dionysian-box .prose h3 {
+  color: var(--gold-accent) !important;
+  border-bottom: 1px dashed var(--gold-accent) !important;
+}
+
+/* --- Onglets --- */
+.tab-nav {
+  background-color: var(--dionysian-purple) !important;
+  padding: 8px !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--gold-accent) !important;
+}
+
+.tab-nav button {
+  color: var(--gold-light) !important;
+  font-weight: 600 !important;
+  font-size: 1.2rem !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.tab-nav button.selected {
+  background-color: var(--bg-beige) !important;
+  color: var(--dionysian-purple) !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+}
+
+/* --- Boutons d'Action --- */
+button.primary, .gr-button-primary, button[variant="primary"] {
+  background: linear-gradient(135deg, var(--pompeian-red), var(--dionysian-purple)) !important;
+  color: var(--gold-light) !important;
+  border: 1px solid var(--gold-accent) !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  padding: 0.8rem 1.5rem !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+button.primary:hover {
+  background: linear-gradient(135deg, var(--dionysian-purple-light), var(--pompeian-red)) !important;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4) !important;
+}
+
+/* Champs de saisie */
+input[type="text"], textarea, .gr-input, select, .gr-dropdown {
+  background-color: #ffffff !important;
+  color: var(--text-dark) !important;
+  border: 1px solid var(--border-soft) !important;
+  font-size: 1.1rem !important;
+  border-radius: 8px !important;
+}

@@ -1,0 +1,10 @@
+# Dépendances / Dependencies — Python >= 3.9
+# Installation / Install : pip install -r requirements.txt
+
+gradio>=4.0          # Interface web / Web UI
+openai>=1.0          # Client API compatible OpenAI (Albert) / OpenAI-compatible API client (Albert)
+python-dotenv>=1.0   # Lecture du fichier .env / .env file loading
+Pillow>=10.0         # Redimensionnement et encodage des images / Image resizing and encoding
+PyMuPDF>=1.23        # Conversion des PDF en images (module "fitz") / PDF-to-image conversion ("fitz" module)
+pandas>=2.0          # Tableaux et agrégations / Dataframes and aggregation
+matplotlib>=3.7      # Graphiques (dataviz) / Charts (dataviz)
